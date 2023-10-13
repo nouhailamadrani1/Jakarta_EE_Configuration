@@ -57,7 +57,7 @@ Déploiement sur un Serveur Web:
 
 - **Déployez l'application sur un serveur web (Apache Tomcat) pour les tests et l'utilisation.**
 
-- **Configuration**
+## Configuration
 - **Configuration de la Base de Données**
 Dans le fichier persistence.xml, vous pouvez configurer les propriétés de connexion à la base de données. Ajustez les propriétés suivantes pour correspondre à votre configuration de base de données:
 
@@ -69,5 +69,5 @@ hibernate.dialect
 - **Jakarta EE et Hibernate**
 Le projet utilise Jakarta EE et Hibernate pour le développement de l'application. Vous pouvez trouver les dépendances et configurations du projet dans le fichier pom.xml. Adaptez-les si nécessaire.
 
-- **Utilisation**
+## Utilisation
 Une fois que l'application est configurée et en cours d'exécution, accédez à Resourcium Optima via un navigateur web. L'application offre une interface intuitive pour gérer les employés.
