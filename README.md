@@ -1,8 +1,6 @@
 <h1 align="center">Resourcium Optima - Documentation</h1>
 
-<p align="center">
-  <img alt="Logo de Resourcium Optima" src="logo.png">
-</p>
+
 
 ## Table des matières
 - [Introduction](#introduction)
