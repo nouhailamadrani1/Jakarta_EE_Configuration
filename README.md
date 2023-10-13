@@ -40,13 +40,13 @@ Avant de commencer, assurez-vous d'avoir satisfait aux prérequis suivants:
    git clone https://github.com/nouhailamadrani1/Jakarta_EE_Configuration.git
 Importer le Projet dans Votre IDE:
 
-Ouvrez votre IDE préféré (par exemple, IntelliJ IDEA ou Eclipse) et importez le projet dans votre espace de travail.
+Ouvrez votre IDE préféré ( IntelliJ IDEA ou Eclipse) et importez le projet dans votre espace de travail.
 
-Configuration de la Base de Données:
+- **Configuration de la Base de Données:
 
 Créez une base de données MySQL pour Resourcium Optima. Mettez à jour les détails de connexion à la base de données dans les fichiers de configuration du projet.
 
-Compiler le Projet:
+- **Compiler le Projet:
 
 Utilisez Apache Maven pour compiler le projet:
 
@@ -55,10 +55,10 @@ Copy code
 mvn clean install
 Déploiement sur un Serveur Web:
 
-Déployez l'application sur un serveur web (Apache Tomcat) pour les tests et l'utilisation.
+- **Déployez l'application sur un serveur web (Apache Tomcat) pour les tests et l'utilisation.
 
-Configuration
-Configuration de la Base de Données
+- **Configuration
+- **Configuration de la Base de Données
 Dans le fichier persistence.xml, vous pouvez configurer les propriétés de connexion à la base de données. Ajustez les propriétés suivantes pour correspondre à votre configuration de base de données:
 
 jakarta.persistence.jdbc.url
@@ -66,8 +66,8 @@ jakarta.persistence.jdbc.user
 jakarta.persistence.jdbc.password
 jakarta.persistence.jdbc.driver
 hibernate.dialect
-Jakarta EE et Hibernate
+- **Jakarta EE et Hibernate
 Le projet utilise Jakarta EE et Hibernate pour le développement de l'application. Vous pouvez trouver les dépendances et configurations du projet dans le fichier pom.xml. Adaptez-les si nécessaire.
 
-Utilisation
+- **Utilisation
 Une fois que l'application est configurée et en cours d'exécution, accédez à Resourcium Optima via un navigateur web. L'application offre une interface intuitive pour gérer les employés.
