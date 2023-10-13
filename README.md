@@ -71,3 +71,6 @@ Le projet utilise Jakarta EE et Hibernate pour le développement de l'applicatio
 
 ## Utilisation
 Une fois que l'application est configurée et en cours d'exécution, accédez à Resourcium Optima via un navigateur web. L'application offre une interface intuitive pour gérer les employés.
+
+## canva
+https://www.canva.com/design/DAFxH2V8jXM/4ckyckAcg-tUOQCUl2zyqg/view?utm_content=DAFxH2V8jXM&utm_campaign=designshare&utm_medium=link&utm_source=editor
