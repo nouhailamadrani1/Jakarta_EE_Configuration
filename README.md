@@ -1,7 +1,8 @@
+<h1 align="center">Resourcium Optima - Documentation</h1>
 
-# Resourcium Optima - Documentation
-
-
+<p align="center">
+  <img alt="Logo de Resourcium Optima" src="logo.png">
+</p>
 
 ## Table des matières
 - [Introduction](#introduction)
@@ -10,7 +11,6 @@
 - [Mise en Route](#mise-en-route)
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
-
 
 ## Introduction
 
@@ -22,46 +22,46 @@ Resourcium Optima joue un rôle central pour répondre aux besoins pressants des
 
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir satisfait aux prérequis suivants :
+Avant de commencer, assurez-vous d'avoir satisfait aux prérequis suivants:
 
-- **Kit de développement Java (JDK) :** Resourcium Optima est développé en utilisant des technologies Java, assurez-vous d'avoir le JDK approprié installé.
+- **Kit de développement Java (JDK):** Resourcium Optima est développé en utilisant des technologies Java, assurez-vous d'avoir le JDK approprié installé.
 
-- **Base de données :** Vous aurez besoin d'un système de gestion de base de données tel que MySQL pour stocker et gérer les données.
+- **Base de données:** Vous aurez besoin d'un système de gestion de base de données tel que MySQL pour stocker et gérer les données.
 
-- **Maven :** Pour compiler et gérer les dépendances du projet, nous vous recommandons d'utiliser Apache Maven.
+- **Maven:** Pour compiler et gérer les dépendances du projet, nous vous recommandons d'utiliser Apache Maven.
 
-- **Environnement de Développement Intégré (IDE) :** Vous pouvez choisir l'IDE de votre préférence. Nous vous recommandons d'utiliser IntelliJ IDEA ou Eclipse.
+- **Environnement de Développement Intégré (IDE):** Vous pouvez choisir l'IDE de votre préférence. Nous vous recommandons d'utiliser IntelliJ IDEA ou Eclipse.
 
-- **Serveur Web :** Resourcium Optima peut être déployé sur un serveur web. Nous vous suggérons d'utiliser Apache Tomcat pour le développement et le déploiement.
+- **Serveur Web:** Resourcium Optima peut être déployé sur un serveur web. Nous vous suggérons d'utiliser Apache Tomcat pour le développement et le déploiement.
 
 ## Mise en Route
 
-1. **Cloner le Dépôt :**
+1. **Cloner le Dépôt:**
 
    ```bash
    git clone https://github.com/nouhailamadrani1/Jakarta_EE_Configuration.git
-Importer le Projet dans Votre IDE :
+Importer le Projet dans Votre IDE:
 
 Ouvrez votre IDE préféré (par exemple, IntelliJ IDEA ou Eclipse) et importez le projet dans votre espace de travail.
 
-Configuration de la Base de Données :
+Configuration de la Base de Données:
 
 Créez une base de données MySQL pour Resourcium Optima. Mettez à jour les détails de connexion à la base de données dans les fichiers de configuration du projet.
 
-Compiler le Projet :
+Compiler le Projet:
 
-Utilisez Apache Maven pour compiler le projet :
+Utilisez Apache Maven pour compiler le projet:
 
 bash
 Copy code
 mvn clean install
-Déploiement sur un Serveur Web :
+Déploiement sur un Serveur Web:
 
-Déployez l'application sur un serveur web (par exemple, Apache Tomcat) pour les tests et l'utilisation.
+Déployez l'application sur un serveur web (Apache Tomcat) pour les tests et l'utilisation.
 
 Configuration
 Configuration de la Base de Données
-Dans le fichier persistence.xml, vous pouvez configurer les propriétés de connexion à la base de données. Ajustez les propriétés suivantes pour correspondre à votre configuration de base de données :
+Dans le fichier persistence.xml, vous pouvez configurer les propriétés de connexion à la base de données. Ajustez les propriétés suivantes pour correspondre à votre configuration de base de données:
 
 jakarta.persistence.jdbc.url
 jakarta.persistence.jdbc.user
@@ -73,7 +73,3 @@ Le projet utilise Jakarta EE et Hibernate pour le développement de l'applicatio
 
 Utilisation
 Une fois que l'application est configurée et en cours d'exécution, accédez à Resourcium Optima via un navigateur web. L'application offre une interface intuitive pour gérer les employés.
-
-
-
-
