@@ -61,11 +61,11 @@ Déploiement sur un Serveur Web:
 - **Configuration de la Base de Données**
 Dans le fichier persistence.xml, vous pouvez configurer les propriétés de connexion à la base de données. Ajustez les propriétés suivantes pour correspondre à votre configuration de base de données:
 
-jakarta.persistence.jdbc.url
-jakarta.persistence.jdbc.user
-jakarta.persistence.jdbc.password
-jakarta.persistence.jdbc.driver
-hibernate.dialect
+- jakarta.persistence.jdbc.url
+- jakarta.persistence.jdbc.user
+- jakarta.persistence.jdbc.password
+- jakarta.persistence.jdbc.driver
+- hibernate.dialect
 - **Jakarta EE et Hibernate**
 Le projet utilise Jakarta EE et Hibernate pour le développement de l'application. Vous pouvez trouver les dépendances et configurations du projet dans le fichier pom.xml. Adaptez-les si nécessaire.
 
