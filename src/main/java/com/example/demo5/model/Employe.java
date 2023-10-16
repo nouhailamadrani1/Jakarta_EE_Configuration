@@ -2,9 +2,6 @@ package com.example.demo5.model;
 
 import jakarta.persistence.*;
 
-
-import java.util.Date;
-
 @Entity
 @Table(name = "Employe")
 public class Employe {
@@ -14,15 +11,19 @@ public class Employe {
 
     private String username;
     private String password;
+    private String confirmPassword; // Added field for confirming password
     private String nom;
     private String prenom;
     private String email;
-    private String poste;
+    private String telephone;
 
-    @Column(name = "dateEmbauche")
-    private Date dateEmbauche;
 
-    // Getter and Setter methods
+
+    @Enumerated(EnumType.STRING)
+    private Post post;
+
+    // Getter and Setter methods for other fields
+
     public int getId() {
         return id;
     }
@@ -47,6 +48,14 @@ public class Employe {
         this.password = password;
     }
 
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
     public String getNom() {
         return nom;
     }
@@ -57,9 +66,6 @@ public class Employe {
 
     public String getPrenom() {
         return prenom;
-    }
-
-    public void setDateEmbauche(Date dateEmbauche) {
     }
 
     public void setPrenom(String prenom) {
@@ -74,15 +80,19 @@ public class Employe {
         this.email = email;
     }
 
-    public String getPoste() {
-        return poste;
+    public Post getPost() {
+        return post;
     }
 
-    public void setPoste(String poste) {
-        this.poste = poste;
+    public void setPost(Post post) {
+        this.post = post;
+    }
+    public String getTelephone() {
+        return telephone;
     }
 
-    public Date getDateEmbauche() {
-        return dateEmbauche;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
+
 }
