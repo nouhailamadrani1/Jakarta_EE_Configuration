@@ -12,6 +12,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 @WebServlet("/login")
@@ -20,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        entityManagerFactory = Persistence.createEntityManagerFactory("default"); // Persistence Unit name
+        entityManagerFactory = Persistence.createEntityManagerFactory("default");
     }
 
     @Override
@@ -37,19 +39,44 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-
         boolean isAuthenticated = authenticate(email, password);
 
         if (isAuthenticated) {
+            // Retrieve the employee information after successful login
+            Employe employee = retrieveEmployee(email, password);
 
-            response.sendRedirect("reseau.jsp");
-        } else {
+            if (employee != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("employeeName", employee.getNom() + employee.getPrenom());
+                session.setAttribute("employeeJobTitle", employee.getPost().getLabel());
 
-            request.setAttribute("errorMessage", "Invalid email or password");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
-            dispatcher.forward(request, response);
+                request.setAttribute("loginStatus", "success");
+                response.sendRedirect("reseau");
+            } else {
+                request.setAttribute("errorMessage", "Invalid email or password");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+                dispatcher.forward(request, response);
+            }
         }
     }
+
+    private Employe retrieveEmployee(String email, String password) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            Query query = entityManager.createQuery("SELECT e FROM Employe e WHERE e.email = :email AND e.password = :password");
+            query.setParameter("email", email);
+            query.setParameter("password", password);
+
+            return (Employe) query.getSingleResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+
+        return null;
+    }
+
 
     private boolean authenticate(String email, String password) {
 

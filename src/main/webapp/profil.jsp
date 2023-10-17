@@ -13,45 +13,146 @@
 
 </head>
 <body style="background-color: #F5F5F5">
-<nav class="navbar navbar-expand-lg" style="background-color: #8387F5; color: white">
-    <div class="container-fluid">
-        <a class="navbar-brand fst-italic fs-3   text-decoration-none" href="#"  style="color: #C9CAF0; "><span class="text-white">Resourcium</span>Optima</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active  text-white" aria-current="page" href="reseau.jsp">Réseau</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-decoration-none text-white" href="#">Équipement</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-decoration-none text-white" href="#">Département</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-decoration-none text-white" href="#">Profil</a>
-                </li>
-            </ul>
-            <div class="d-flex align-items-center p-0 m-0 "  height="40px">
-                <img src="images/n.jpg" class="rounded-circle me-2" alt="profil" width="40px" height="40px">
-                <div class="me-2 " height="40px">
-                    <h6>Nouhaila Madrani <br> <span class="fw-normal">Developer</span></h6>
+<jsp:include page="nav.jsp"/>
+<%----%>
+<div  class="my-4" style="background-color: #F5F5F5">
+<div class="d-flex justify-content-around align-items-center   ">
+    <div class="rounded d-flex justify-content-center  align-items-center
+" style="width: 15% ; background-color: white ; height: 220px">
 
-                </div>
+       <div> <div class="d-flex justify-content-center py-2">
+           <button type="submit" class="btn  shadow  px-1 fw-bold " style="background-color: #8387F5 ; color: #ffffff ;width: 190px ">modifier </button>
+       </div>
+           <div  class="d-flex justify-content-center py-2">
+               <button type="submit" class="btn  shadow  px-1 fw-bold " style="background-color: #C9CAF0 ; color: #8387F5 ;width: 190px">le mot de passe</button>
+           </div>
+           <div  class="d-flex justify-content-center py-2">
+               <button type="submit" class="btn  shadow  px-1 fw-bold " style="background-color: #F81010 ; color: #ffffff ;width: 190px">Déconnecte</button>
+           </div></div>
+    </div>
+    <div class="rounded d-flex justify-content-center align-items-center" style="width: 50%; background-color: white; height: 220px;">
+        <div class="w-25">
+            <div class="d-flex justify-content-center py-2">
+                <img width="100" height="100" src="images/n.jpg" class="rounded-circle me-2" alt="profil" />
+            </div>
+            <div class="mb-2 text-center">
+                <p class="fw-bolder">  <%= session.getAttribute("employeeName") %> <br><span class="fw-normal">      <%= session.getAttribute("employeeJobTitle") %></span><p/>
+            </div>
+        </div>
+
+        <div class="w-25 px-2">
+            <div class="mb-3">
+                <label  class="form-label">Nom</label>
+                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="nouhaila">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Prénom</label>
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" placeholder="madrani">
+            </div>
+        </div>
+
+        <div class="w-50 px-4">
+            <div class="mb-3">
+                <label  class="form-label">Email address</label>
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" id="" placeholder="nouhaila2020@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Numéro de téléphone</label>
+                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="+212 639467124">
             </div>
         </div>
     </div>
-</nav>
-<div  style="background-color: #F5F5F5">
-<div class="d-flex justify-content-around my-3">
-    <div class="rounded" style="width: 15% ; background-color: white ; height: 240px">u</div>
-    <div  class="rounded" style="width: 50% ; background-color: white ; height: 240px">i</div>
-    <div  class="rounded" style="width: 20% ; background-color: white ; height: 240px">i</div>
+
+    <div  class="rounded d-flex justify-content-center  align-items-center" style="width: 20% ; background-color: white ; height: 220px">
+        <div>
+
+               <div class="d-flex justify-content-center py-2">
+                   <img width="100" height="100" src="images/n.jpg" class="rounded-circle me-2" alt="profil"/>
+               </div>
+               <div  class="d-flex justify-content-center py-2">
+                   <button type="submit" class="btn  shadow  px-1 fw-bold " style="background-color: #FFA9D4 ; color: #ffffff ;width: 190px">modifier profil </button>
+               </div>
+
+        </div>
+    </div>
 
 </div>
+<%--    --%>
+
+        <div class="m-4 d-flex justify-content-around align-items-center p-3 rounded shadow-sm" style="background-color: #83DBF3">
+            <h6 class="text-white fw-semibold"> Department  : Web Development</h6>
+            <h6  class="text-white fw-semibold">Chef de Service : Aya Madrani</h6>
+            <h6  class="text-white fw-semibold"> Department  : Web Development</h6>
+
+    </div>
+<%--    --%>
+
+    <div class="m-4 " style="background-color: white">
+
+        <table class="table ">
+            <thead>
+            <tr>
+                <th scope="col" style="width:5% ">#</th>
+                <th scope="col" style="width: 10%">Titre</th>
+                <th scope="col" style="width:40% ">Description</th>
+                <th scope="col" style="width:10% ">Équipement</th>
+                <th scope="col" style="width:15% ">Deadline</th>
+                <th scope="col" style="width:10% ">Priorité</th>
+                <th scope="col" style="width:10% ">Statut</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Installation</td>
+                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
+                <td>Ordinateur Portable</td>
+                <td>30 / 10 / 2023</td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style="background-color: #F9A8A7 ; color: #F81010">
+                    Custom button
+                </button></td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style=" background-color: #BBFA6B ; color: #75C80C">
+                    Custom button
+                </button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Installation</td>
+                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
+                <td>Ordinateur Portable</td>
+                <td>30 / 10 / 2023</td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style=" background-color: #F9A8A7 ; color: #F81010">
+                    Custom button
+                </button></td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style="background-color: #BBFA6B ; color: #75C80C">
+                    Custom button
+                </button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Installation</td>
+                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
+                <td>Ordinateur Portable</td>
+                <td>30 / 10 / 2023</td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style=" background-color: #F9A8A7 ; color: #F81010">
+                    Custom button
+                </button></td>
+                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
+                            style=" background-color: #BBFA6B ; color: #75C80C">
+                    Custom button
+                </button></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+<%--    --%>
+
 
 
 

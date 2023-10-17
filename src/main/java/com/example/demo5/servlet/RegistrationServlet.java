@@ -25,13 +25,13 @@ public class RegistrationServlet extends HttpServlet {
         String telephone = request.getParameter("telephone");
         String post = request.getParameter("post");
 
-        // Check if the password and confirmPassword match
+
         if (!password.equals(confirmPassword)) {
             response.sendRedirect("register.jsp?error=password_mismatch");
             return;
         }
 
-        // Check if the email is valid
+
         if (!isValidEmail(email)) {
             response.sendRedirect("register.jsp?error=invalid_email");
             return;
