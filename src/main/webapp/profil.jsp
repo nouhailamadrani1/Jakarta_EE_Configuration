@@ -43,22 +43,22 @@
         <div class="w-25 px-2">
             <div class="mb-3">
                 <label  class="form-label">Nom</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="nouhaila">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= session.getAttribute("nom") %>">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Prénom</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom" placeholder="madrani">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" placeholder=""  value="<%= session.getAttribute("prenom") %>">
             </div>
         </div>
 
         <div class="w-50 px-4">
             <div class="mb-3">
                 <label  class="form-label">Email address</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom" id="" placeholder="nouhaila2020@gmail.com">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" id="" placeholder="" value="<%= session.getAttribute("email") %>">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Numéro de téléphone</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="+212 639467124">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= session.getAttribute("telephone") %>">
             </div>
         </div>
     </div>

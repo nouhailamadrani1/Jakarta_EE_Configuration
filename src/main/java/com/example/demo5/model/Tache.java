@@ -1,13 +1,11 @@
 package com.example.demo5.model;
 
 import jakarta.persistence.*;
-
-
 import java.util.Date;
+
 @Entity
 @Table(name = "Tache")
 public class Tache {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,13 +13,16 @@ public class Tache {
 
     private String description;
     private Date deadline;
-    private String priorite;
+
+    @Enumerated(EnumType.STRING)
+    private PrioriteTache priorite;
 
     @ManyToOne
     @JoinColumn(name = "employeAssigne")
     private Employe employeAssigne;
 
-    private String statut;
+    @Enumerated(EnumType.STRING)
+    private StatutTache statut;
 
     // Getters and setters
     public int getId() {
@@ -48,11 +49,11 @@ public class Tache {
         this.deadline = deadline;
     }
 
-    public String getPriorite() {
+    public PrioriteTache getPriorite() {
         return priorite;
     }
 
-    public void setPriorite(String priorite) {
+    public void setPriorite(PrioriteTache priorite) {
         this.priorite = priorite;
     }
 
@@ -64,11 +65,11 @@ public class Tache {
         this.employeAssigne = employeAssigne;
     }
 
-    public String getStatut() {
+    public StatutTache getStatut() {
         return statut;
     }
 
-    public void setStatut(String statut) {
+    public void setStatut(StatutTache statut) {
         this.statut = statut;
     }
 }

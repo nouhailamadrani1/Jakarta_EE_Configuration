@@ -17,7 +17,7 @@
     <title>Profile Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #F5F5F5">
 <div class="m-0 p-0 overflow-hidden">
     <div class="row">
         <div class="col-md-2 bg-white">
@@ -62,7 +62,7 @@
                                 List<Employe> employees = (List<Employe>) request.getAttribute("employees");
                                 for (Employe employee : employees) {
                             %>
-                            <div class="rounded shadow-sm m-2" style="height: 210px; width: 300px; background-color: #ffffff">
+                            <div class="rounded-4 shadow-sm m-2" style="height: 210px; width: 300px; background-color: #ffffff">
                                 <div class="d-flex align-items-center justify-content-center p-3 m-0" height="50px">
                                     <img src="images/n.jpg" class="rounded-circle me-2" alt="profil" width="50px" height="50px">
                                     <div class="me-2" height="50px">
