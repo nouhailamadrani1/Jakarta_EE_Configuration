@@ -14,7 +14,7 @@
           <a class="nav-link text-decoration-none text-white" href="#">Equipement</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="#">Departement</a>
+          <a class="nav-link text-decoration-none text-white" href="departement.jsp">Departement</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-decoration-none text-white" href="profil.jsp">Profil</a>

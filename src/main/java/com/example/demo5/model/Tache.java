@@ -14,7 +14,7 @@ public class Tache {
     private String description;
     private Date deadline;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) // Utilise EnumType.STRING pour stocker les noms des énumérations
     private PrioriteTache priorite;
 
     @ManyToOne

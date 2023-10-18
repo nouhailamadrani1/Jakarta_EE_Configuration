@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeTaskServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/departement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/TacheServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/PrioriteTache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/PrioriteTache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/StatutTache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/StatutTache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Tache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +29,9 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -194,7 +197,7 @@
       <workItem from="1697371094501" duration="14741000" />
       <workItem from="1697443206743" duration="20811000" />
       <workItem from="1697498206648" duration="25000000" />
-      <workItem from="1697573029668" duration="17028000" />
+      <workItem from="1697573029668" duration="25127000" />
     </task>
     <servers />
   </component>

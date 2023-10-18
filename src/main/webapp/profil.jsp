@@ -1,5 +1,6 @@
 <%@ page import="com.example.demo5.model.Tache" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.demo5.model.StatutTache" %>
 <%--
   Created by IntelliJ IDEA.
   User: Youcode
@@ -113,20 +114,30 @@
                 <td><%= task.getDeadline() %></td>
                 <td>
                     <button type="button" class="btn btn-sm fw-medium shadow-sm"
-                    >
+                            style="background-color:<%= task.getPriorite().getColor() %>; color: <%= task.getPriorite().getTextColor() %>">
+
                         <%= task.getPriorite().getLabel() %>
                     </button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-sm fw-medium shadow-sm"
-                    >
-                        <%= task.getStatut().getLabel() %>
-                    </button>
+                    <select class="form-select form-select-sm fw-medium shadow-sm"
+                            style="background-color:<%= task.getStatut().getColor() %>; color: <%= task.getStatut().getTextColor() %>"
+                         >
+
+                        <option value="<%= task.getStatut().name() %>"><%= task.getStatut().getLabel() %></option>
+                        <% for (StatutTache statut : StatutTache.values()) { %>
+                        <% if (statut != task.getStatut()) { %>
+                        <option value="<%= statut.name() %>"><%= statut.getLabel() %></option>
+                        <% } %>
+                        <% } %>
+                    </select>
                 </td>
             </tr>
             <%
                 }}
             %>
+
+
             </tbody>
         </table>
     </div>
