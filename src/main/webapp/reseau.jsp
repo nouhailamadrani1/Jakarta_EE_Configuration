@@ -79,7 +79,10 @@
                                 <h6 class="px-3 m-0"><%= employee.getPrenom() + " " + employee.getNom() %></h6>
                                 <p class="px-3 m-0 text-black-50"><%= employee.getPost().getLabel() %></p>
                                 <div class="d-flex justify-content-center my-2">
-                                    <button type="button" class="btn shadow px-3" style="background-color:#8387F5; color:#ffffff">Profil</button>
+                                    <form action="profilEmploye" method="post">
+                                        <input type="hidden" value="<%= employee.getId() %>" name="idEmployee">
+                                    <button type="submit" class="btn shadow px-3" style="background-color:#8387F5; color:#ffffff" >show all task employe</button>
+                                    </form>
                                 </div>
                             </div>
                             <%

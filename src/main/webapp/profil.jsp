@@ -1,3 +1,5 @@
+<%@ page import="com.example.demo5.model.Tache" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: Youcode
@@ -87,70 +89,48 @@
     </div>
 <%--    --%>
 
-    <div class="m-4 " style="background-color: white">
-
-        <table class="table ">
+    <!-- Add this code in profil.jsp to display the tasks -->
+    <div class="m-4" style="background-color: white">
+        <table class="table">
             <thead>
             <tr>
-                <th scope="col" style="width:5% ">#</th>
-                <th scope="col" style="width: 10%">Titre</th>
-                <th scope="col" style="width:40% ">Description</th>
-                <th scope="col" style="width:10% ">Équipement</th>
-                <th scope="col" style="width:15% ">Deadline</th>
-                <th scope="col" style="width:10% ">Priorité</th>
-                <th scope="col" style="width:10% ">Statut</th>
+                <th scope="col" style="width:5%">#</th>
+                <th scope="col" style="width:40%">Description</th>
+                <th scope="col" style="width:15%">Deadline</th>
+                <th scope="col" style="width:10%">Priorité</th>
+                <th scope="col" style="width:10%">Statut</th>
             </tr>
             </thead>
             <tbody>
+            <%
+                List<Tache> tasks = (List<Tache>) request.getAttribute("tasks");
+                if (tasks != null && !tasks.isEmpty()) {
+                    for (Tache task : tasks) {
+            %>
             <tr>
-                <th scope="row">1</th>
-                <td>Installation</td>
-                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
-                <td>Ordinateur Portable</td>
-                <td>30 / 10 / 2023</td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style="background-color: #F9A8A7 ; color: #F81010">
-                    Custom button
-                </button></td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style=" background-color: #BBFA6B ; color: #75C80C">
-                    Custom button
-                </button></td>
+                <th scope="row">${loop.index + 1}</th>
+                <td><%= task.getDescription() %></td>
+                <td><%= task.getDeadline() %></td>
+                <td>
+                    <button type="button" class="btn btn-sm fw-medium shadow-sm"
+                    >
+                        <%= task.getPriorite().getLabel() %>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm fw-medium shadow-sm"
+                    >
+                        <%= task.getStatut().getLabel() %>
+                    </button>
+                </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Installation</td>
-                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
-                <td>Ordinateur Portable</td>
-                <td>30 / 10 / 2023</td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style=" background-color: #F9A8A7 ; color: #F81010">
-                    Custom button
-                </button></td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style="background-color: #BBFA6B ; color: #75C80C">
-                    Custom button
-                </button></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Installation</td>
-                <td> Un nouvel employé, Sarah, a rejoint l'entreprise, et elle a besoin d'un logiciel spécifique installé sur son ordinateur portable pour qu'elle puisse commencer à travailler.</td>
-                <td>Ordinateur Portable</td>
-                <td>30 / 10 / 2023</td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style=" background-color: #F9A8A7 ; color: #F81010">
-                    Custom button
-                </button></td>
-                <td><button type="button" class="btn  btn-sm fw-medium shadow-sm"
-                            style=" background-color: #BBFA6B ; color: #75C80C">
-                    Custom button
-                </button></td>
-            </tr>
-
+            <%
+                }}
+            %>
             </tbody>
         </table>
     </div>
+
 <%--    --%>
 
 
