@@ -1,6 +1,6 @@
-<%@ page import="com.example.demo5.model.Employe" %>
+<%@ page import="com.example.demo5.entities.Employe" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.example.demo5.model.Post" %><%--
+<%@ page import="com.example.demo5.entities.Post" %><%--
   Created by IntelliJ IDEA.
   User: YourUsername
   Date: 15/10/2023

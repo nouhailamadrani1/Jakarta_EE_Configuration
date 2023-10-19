@@ -1,6 +1,6 @@
-<%@ page import="com.example.demo5.model.Tache" %>
+<%@ page import="com.example.demo5.entities.Tache" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.example.demo5.model.StatutTache" %>
+<%@ page import="com.example.demo5.entities.StatutTache" %>
 <%--
   Created by IntelliJ IDEA.
   User: Youcode

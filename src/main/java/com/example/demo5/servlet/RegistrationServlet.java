@@ -1,7 +1,8 @@
 package com.example.demo5.servlet;
 
-import com.example.demo5.model.Employe;
-import com.example.demo5.model.Post;
+import com.example.demo5.entities.Employe;
+import com.example.demo5.entities.Post;
+import com.example.demo5.services.EmployeeService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -15,7 +16,16 @@ import java.io.IOException;
 
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
+    private EmployeeService employeeService;
+
+    public RegistrationServlet() {
+
+        this.employeeService = new EmployeeService();
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Retrieve request parameters
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
@@ -25,60 +35,11 @@ public class RegistrationServlet extends HttpServlet {
         String telephone = request.getParameter("telephone");
         String post = request.getParameter("post");
 
-
-        if (!password.equals(confirmPassword)) {
-            response.sendRedirect("register.jsp?error=password_mismatch");
-            return;
+        // Call the service to register the employee
+        if (employeeService.registerEmployee(username, password, confirmPassword, nom, prenom, email, telephone, post)) {
+            response.sendRedirect("login.jsp");
+        } else {
+            response.sendRedirect("register.jsp?error=registration_failed");
         }
-
-
-        if (!isValidEmail(email)) {
-            response.sendRedirect("register.jsp?error=invalid_email");
-            return;
-        }
-
-
-        if (username == null || username.isEmpty()) {
-            response.sendRedirect("register.jsp?error=empty_username");
-            return;
-        }
-
-
-        Employe employe = new Employe();
-        employe.setUsername(username);
-        employe.setPassword(password);
-        employe.setNom(nom);
-        employe.setPrenom(prenom);
-        employe.setEmail(email);
-        employe.setTelephone(telephone);
-        employe.setPost(Post.valueOf(post));
-
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction transaction = em.getTransaction();
-
-        try {
-            transaction.begin();
-            em.persist(employe);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction != null && transaction.isActive()) {
-                transaction.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            em.close();
-            emf.close();
-        }
-
-
-        response.sendRedirect("login.jsp");
-    }
-
-
-    private boolean isValidEmail(String email) {
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
-        return email.matches(regex);
     }
 }

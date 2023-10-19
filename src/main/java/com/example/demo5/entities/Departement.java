@@ -1,9 +1,6 @@
-package com.example.demo5.model;
+package com.example.demo5.entities;
 
 import jakarta.persistence.*;
-
-
-import java.util.Date;
 
 @Entity
 @Table(name = "Departement")

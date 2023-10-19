@@ -1,4 +1,4 @@
-package com.example.demo5.model;
+package com.example.demo5.entities;
 
 public enum StatutTache {
     EN_ATTENTE("En attente", "#f39c12", "#000000"),  // Yellow background, black text

@@ -1,6 +1,6 @@
 package com.example.demo5.servlet;
 
-import com.example.demo5.model.Employe;
+import com.example.demo5.entities.Employe;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

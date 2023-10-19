@@ -1,4 +1,4 @@
-package com.example.demo5.model;
+package com.example.demo5.entities;
 
 public enum Post {
     CHEF_DE_DEPARTEMENT("Chef de Département"),

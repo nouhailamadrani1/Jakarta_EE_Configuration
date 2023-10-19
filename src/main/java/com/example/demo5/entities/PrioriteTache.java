@@ -1,4 +1,4 @@
-package com.example.demo5.model;
+package com.example.demo5.entities;
 
 public enum PrioriteTache {
     BASSE("Basse", "#3498db", "#ffffff"),   // Blue background, white text
