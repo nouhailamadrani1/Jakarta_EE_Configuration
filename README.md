@@ -74,3 +74,6 @@ Une fois que l'application est configurée et en cours d'exécution, accédez à
 
 ## canva
 https://www.canva.com/design/DAFxH2V8jXM/4ckyckAcg-tUOQCUl2zyqg/view?utm_content=DAFxH2V8jXM&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+##  Une maquette Figma by me <3
+https://www.figma.com/file/Lidh2yCaXlIoqXcNEYl8Y5/Untitled?type=design&node-id=0%3A1&mode=design&t=5apYYRyzP4pxzFKX-1
