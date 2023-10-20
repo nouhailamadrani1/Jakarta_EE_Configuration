@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.example.demo5.entities.Departement" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Youcode
   Date: 18/10/2023
@@ -37,44 +38,32 @@
 <div class="px-3 ">
     <h5 class="text-center my-3">Départements</h5>
     <div class="d-flex justify-content-center flex-wrap ">
+        <%
+            List<Departement> departementList= (List<Departement>) request.getAttribute("departementList");
+            for (Departement departement  : departementList) {
+        %>
         <div class="rounded-4 shadow-sm m-2 d-flex align-items-center" style="height: 210px; width: 300px; background-color: #ffffff">
             <div class="text-start">
                 <div class="m-1 p-1 fw-bolder ">
                     <img width="24" height="24" src="https://img.icons8.com/ios/24/department.png" alt="department" />
-                    <span class=""> Department : Web Development</span>
+                    <span class=""> Department : <%=departement.getNom()%></span>
                 </div>
                 <div class="m-1 p-1 fw-bolder  ">
                     <img width="24" height="24" src="https://img.icons8.com/ios/24/businessman.png" alt="businessman" />
-                    <span class=""> Chef de Service : Aya Madrani</span>
+                    <span class=""> Chef de Service : <%=departement.getChef().getNom() + departement.getChef().getPrenom()%></span>
                 </div>
-                <div class="m-1 p-1 fw-bolder  ">
-                    <img width="24" height="24" src="https://img.icons8.com/ios/24/groups.png" alt="groups" />
-                    <span class=""> Effectif du Département : 12</span>
-                </div>
+<%--                <div class="m-1 p-1 fw-bolder  ">--%>
+<%--                    <img width="24" height="24" src="https://img.icons8.com/ios/24/groups.png" alt="groups" />--%>
+<%--                    <span class=""> Effectif du Département : </<%=departement.count()%>span>--%>
+<%--                </div>--%>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn shadow px-3 mt-2" style="background-color:#8387F5; color:#ffffff">Plus de détails</button>
                 </div>
             </div>
         </div>
-        <div class="rounded-4 shadow-sm m-2 d-flex align-items-center" style="height: 210px; width: 300px; background-color: #ffffff">
-            <div class="text-start">
-                <div class="m-1 p-1 fw-bolder ">
-                    <img width="24" height="24" src="https://img.icons8.com/ios/24/department.png" alt="department" />
-                    <span class=""> Department : Web Development</span>
-                </div>
-                <div class="m-1 p-1 fw-bolder  ">
-                    <img width="24" height="24" src="https://img.icons8.com/ios/24/businessman.png" alt="businessman" />
-                    <span class=""> Chef de Service : Aya Madrani</span>
-                </div>
-                <div class="m-1 p-1 fw-bolder  ">
-                    <img width="24" height="24" src="https://img.icons8.com/ios/24/groups.png" alt="groups" />
-                    <span class=""> Effectif du Département : 12</span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn shadow px-3 mt-2" style="background-color:#8387F5; color:#ffffff">Plus de détails</button>
-                </div>
-            </div>
-        </div>
+        <%
+            }
+        %>
     </div>
 
 

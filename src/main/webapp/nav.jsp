@@ -14,10 +14,11 @@
           <a class="nav-link text-decoration-none text-white" href="equipements">Equipement</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="departement.jsp">Departement</a>
+          <a class="nav-link text-decoration-none text-white" href="department">Departement</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-decoration-none text-white" href="profil.jsp">Profil</a>
+
         </li>
       </ul>
       <div class="d-flex align-items-center p-0 m-0" height="40px">

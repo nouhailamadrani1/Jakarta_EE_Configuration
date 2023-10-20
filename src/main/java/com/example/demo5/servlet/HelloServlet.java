@@ -5,6 +5,7 @@ import java.io.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -12,7 +13,7 @@ import jakarta.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
     private String message;
 
-    public void init() {
+    public void init() throws ServletException {
         message = "Hello World!";
     }
 
