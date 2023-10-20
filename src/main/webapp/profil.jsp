@@ -1,6 +1,7 @@
 <%@ page import="com.example.demo5.entities.Tache" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.demo5.entities.StatutTache" %>
+<%@ page import="com.example.demo5.entities.Employe" %>
 <%--
   Created by IntelliJ IDEA.
   User: Youcode
@@ -34,36 +35,44 @@
            </div></div>
     </div>
     <div class="rounded d-flex justify-content-center align-items-center" style="width: 50%; background-color: white; height: 220px;">
+        <%
+            Employe employe = (Employe) request.getAttribute("employee");
+            if (employe != null) {
+        %>
         <div class="w-25">
             <div class="d-flex justify-content-center py-2">
+
                 <img width="100" height="100" src="images/n.jpg" class="rounded-circle me-2" alt="profil" />
             </div>
             <div class="mb-2 text-center">
-                <p class="fw-bolder">  <%= session.getAttribute("employeeName") %> <br><span class="fw-normal">      <%= session.getAttribute("employeeJobTitle") %></span><p/>
+                <p class="fw-bolder">  <%= employe.getUsername() %> <br><span class="fw-normal">      <%= employe.getPost().getLabel() %></span><p/>
             </div>
         </div>
 
         <div class="w-25 px-2">
             <div class="mb-3">
                 <label  class="form-label">Nom</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= session.getAttribute("nom") %>">
+                <input type="" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= employe.getNom() %>">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Prénom</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom" placeholder=""  value="<%= session.getAttribute("prenom") %>">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" placeholder=""  value="<%= employe.getPrenom() %>">
             </div>
         </div>
 
         <div class="w-50 px-4">
             <div class="mb-3">
                 <label  class="form-label">Email address</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom" id="" placeholder="" value="<%= session.getAttribute("email") %>">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom" id="" placeholder="" value="<%= employe.getEmail() %>">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Numéro de téléphone</label>
-                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= session.getAttribute("telephone") %>">
+                <input type="email" class="form-control  border border-0 border-primary border-bottom"  placeholder="" value="<%= employe.getTelephone() %>">
             </div>
         </div>
+        <%
+                }
+        %>
     </div>
 
     <div  class="rounded d-flex justify-content-center  align-items-center" style="width: 20% ; background-color: white ; height: 220px">

@@ -42,4 +42,14 @@ public class EmployeeService {
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         return email.matches(regex);
     }
+
+    public Employe getEmployeeById(int idEmployee){
+        Employe employee = employeeRepository.getEmployeeById(idEmployee);
+
+        if (employee != null) {
+            return employee;
+        }
+        return null;
+    }
+
 }

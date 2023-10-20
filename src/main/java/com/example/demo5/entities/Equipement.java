@@ -2,9 +2,11 @@ package com.example.demo5.entities;
 
 import jakarta.persistence.*;
 
-import java.sql.Date;
+import java.util.Date;
+
 
 @Entity
+
 @Table(name = "Equipement")
 public class Equipement {
     @Id
@@ -20,7 +22,7 @@ public class Equipement {
     @Column(name = "dateMaintenance")
     private Date dateMaintenance;
 
-    private String etat;
+    private Etat etat;
 
     // Getters and setters
 
@@ -64,11 +66,11 @@ public class Equipement {
         this.dateMaintenance = dateMaintenance;
     }
 
-    public String getEtat() {
+    public Etat getEtat() {
         return etat;
     }
 
-    public void setEtat(String etat) {
+    public void setEtat(Etat etat) {
         this.etat = etat;
     }
 }

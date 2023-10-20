@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
     private AuthenticationService authenticationService;
 
     public LoginServlet() {
-        this.authenticationService = new AuthenticationService(); // You should inject this via a framework.
+        this.authenticationService = new AuthenticationService();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

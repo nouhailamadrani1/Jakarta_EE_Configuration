@@ -9,6 +9,7 @@ public enum Post {
     TESTEUR("Testeur"),
     RESPONSABLE_PROJET("Responsable de Projet");
 
+
     private String label;
 
     Post(String label) {

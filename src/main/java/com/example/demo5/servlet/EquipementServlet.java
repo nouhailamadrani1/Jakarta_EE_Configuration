@@ -1,7 +1,9 @@
-import com.example.demo5.entities.Equipement;
-import com.example.demo5.services.EquipementService;
+package com.example.demo5.servlet;
 
-import jakarta.inject.Inject;
+import com.example.demo5.entities.Equipement;
+import com.example.demo5.repositories.EquipementRepository;
+
+import com.example.demo5.services.EquipementService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,13 +14,19 @@ import java.util.List;
 
 @WebServlet("/equipements")
 public class EquipementServlet extends HttpServlet {
-    @Inject
-    private EquipementService equipementService;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Equipement> equipmentList = equipementService.getAllEquipements();
+    private EquipementRepository equipementRepository;
 
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        equipementRepository = new EquipementRepository();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<Equipement> equipmentList = equipementRepository.findAllEquipements();
         request.setAttribute("equipmentList", equipmentList);
-        request.getRequestDispatcher("/equipment.jsp").forward(request, response);
+        request.getRequestDispatcher("equipement.jsp").forward(request, response);
     }
 }

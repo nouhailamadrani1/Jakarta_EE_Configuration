@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.example.demo5.entities.Equipement" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Youcode
   Date: 18/10/2023
@@ -40,19 +41,25 @@
 <div class="px-3 ">
     <h5 class="text-center my-3">Équipements</h5>
     <div class="d-flex justify-content-center flex-wrap ">
-        <div class="rounded-4 shadow-sm m-1 d-flex   justify-content-center align-items-center" style="height: 210px; width: 300px; background-color: #ffffff">
-
-                <div class="  fw-bolder text-start">
-              <h6>Nom  : Portable HP</h6>
-                    <h6>Etat  :<span style="color: #F81010"> En sevice</span></h6>
-                    <h6>Type : Laptop professionnel</h6>
-                    <div class=" d-flex justify-content-center my-1  " >
-                        <button class="btn px-2 mx-1"  style="color: #8387F5 ; background-color: #C9CAF0">Plus de détails</button>
-                        <button class="btn px-2 mx-1"  style="color: #ffffff ;  background-color: #F81010">Réserve</button> </div>
-
-
+        <%
+            List<Equipement> equipementList = (List<Equipement>) request.getAttribute("equipmentList");
+            for (Equipement equipment  : equipementList) {
+        %>
+            <div class="rounded-4 shadow-sm m-1 d-flex justify-content-center align-items-center"
+                 style="height: 210px; width: 300px; background-color: #ffffff">
+                <div class="fw-bolder text-start">
+                    <h6>Nom : <%=equipment.getNom()%></h6>
+                    <h6>Etat : <span style="color: ${equipment.etat.getCouleurTexte()}"><%=equipment.getEtat().getNom()%></span></h6>
+                    <h6>Type : <%=equipment.getType()%></h6>
+                    <div class="d-flex justify-content-center my-1">
+                        <button class="btn px-2 mx-1" style="color: #8387F5; background-color: #C9CAF0">Plus de détails</button>
+                        <button class="btn px-2 mx-1" style="color: #ffffff; background-color: #F81010">Réserve</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        <%
+            }
+        %>
     </div>
     </div>
 

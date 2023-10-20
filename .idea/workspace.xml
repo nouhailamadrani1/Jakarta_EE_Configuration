@@ -10,30 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/TaskRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/EmployeDepartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeDepartement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/EmployeEquipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeEquipement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Equipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Equipement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/PrioriteTache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/PrioriteTache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/StatutTache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/StatutTache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/model/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Tache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Equipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Equipement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Etat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Etat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EquipementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EquipementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeTaskServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/departement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +35,8 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Enum" />
         <option value="Jsp File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -76,32 +66,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Youcode/Desktop/demo5/src/main/webapp/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Youcode/Desktop/demo5/src/main/webapp/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo5.repositories" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Youcode\Desktop\demo5\src\main\webapp\images" />
       <recent name="C:\Users\Youcode\Desktop\demo5\src\main\resources\META-INF" />
@@ -215,7 +208,7 @@
       <workItem from="1697498206648" duration="25000000" />
       <workItem from="1697573029668" duration="25127000" />
       <workItem from="1697651287915" duration="13706000" />
-      <workItem from="1697719461746" duration="5137000" />
+      <workItem from="1697719461746" duration="22921000" />
     </task>
     <servers />
   </component>
