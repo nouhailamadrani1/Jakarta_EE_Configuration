@@ -62,6 +62,7 @@ public class EquipementRepository {
         return null;
     }
 
+
     public void deleteEquipement(int id) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
         EntityManager em = emf.createEntityManager();

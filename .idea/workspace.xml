@@ -10,14 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/DepartementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/AdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/DepartmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/DepartmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EquipementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EquipementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/departement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +35,8 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Enum" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -202,7 +208,7 @@
       <workItem from="1697498206648" duration="25000000" />
       <workItem from="1697573029668" duration="25127000" />
       <workItem from="1697651287915" duration="13706000" />
-      <workItem from="1697719461746" duration="28976000" />
+      <workItem from="1697719461746" duration="40574000" />
     </task>
     <servers />
   </component>

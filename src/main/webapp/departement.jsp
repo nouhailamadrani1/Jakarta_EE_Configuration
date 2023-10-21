@@ -50,7 +50,7 @@
                 </div>
                 <div class="m-1 p-1 fw-bolder  ">
                     <img width="24" height="24" src="https://img.icons8.com/ios/24/businessman.png" alt="businessman" />
-                    <span class=""> Chef de Service : <%=departement.getChef().getNom() + departement.getChef().getPrenom()%></span>
+                    <span class=""> Chef de Service : <%=departement.getChef().getUsername()%></span>
                 </div>
 <%--                <div class="m-1 p-1 fw-bolder  ">--%>
 <%--                    <img width="24" height="24" src="https://img.icons8.com/ios/24/groups.png" alt="groups" />--%>

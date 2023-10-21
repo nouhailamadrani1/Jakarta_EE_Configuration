@@ -2,7 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.demo5.entities.Post" %><%--
   Created by IntelliJ IDEA.
-  User: YourUsername
+  User: youcode
   Date: 15/10/2023
   Time: 01:18
   To change this template use File | Settings | File Templates.
@@ -33,7 +33,6 @@
                         <input class="form-check-input" type="checkbox" value="<%= post.name() %>" id="<%= post.name() %>Checkbox">
                         <label class="form-check-label" for="<%= post.name() %>Checkbox"><%= post.getLabel() %></label>
                     </div>
-                    <!-- Add the count of employees for each job title here -->
                     <span class="badge rounded-pill" style="background-color: #C9CAF0; color: #8387F5">12</span>
                 </li>
                 <%

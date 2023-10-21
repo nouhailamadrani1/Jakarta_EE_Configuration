@@ -20,6 +20,10 @@
           <a class="nav-link text-decoration-none text-white" href="profil.jsp">Profil</a>
 
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-white" href="admin">Admin</a>
+
+        </li>
       </ul>
       <div class="d-flex align-items-center p-0 m-0" height="40px">
         <img src="images/n.jpg" class="rounded-circle me-2" alt="profil" width="40px" height="40px">
