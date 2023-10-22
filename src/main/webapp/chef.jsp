@@ -1,9 +1,16 @@
-<% if (session.getAttribute("id") != null) { %>
 <%@ page import="com.example.demo5.entities.Employe" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.demo5.entities.EmployeDepartement" %>
+<%@ page import="com.example.demo5.entities.StatutTache" %>
+<%@ page import="com.example.demo5.entities.PrioriteTache" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%
+
+    if (session.getAttribute("id")!= null) {
+
+
+%>
 <head>
     <title>Profile Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +62,7 @@
                     </td>
                 </tr>
                 <!-- Modal for adding a task -->
-                <div class="modal fade" id="addTask_<%= employee.getEmploye().getId() %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="addTask_<%= employee.getEmploye().getId() %>" tabindex="-1"  aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -63,8 +70,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="addTask" method="post">
-                                    <div class="mb-3">
+                                <form action="${pageContext.request.contextPath}/addTask" method="post">                                    <div class="mb-3">
                                         <label class="form-label">Description de la tâche</label>
                                         <textarea class="form-control" name="description" required></textarea>
                                     </div>
@@ -73,21 +79,27 @@
                                         <input type="date" class="form-control" name="deadline" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Priorité de la tâche</label>
-                                        <select class="form-select" name="priorite" required>
-                                            <option value="HAUTE">Haute</option>
-                                            <option value="MOYENNE">Moyenne</option>
-                                            <option value="FAIBLE">Faible</option>
+                                        <label class="form-label">Statut de la tâche</label>
+                                        <select class="form-select" name="statut" required>
+                                            <option value="<%= StatutTache.EN_ATTENTE %>"><%= StatutTache.EN_ATTENTE %></option>
+                                            <option value="<%= StatutTache.EN_COURS %>"><%= StatutTache.EN_COURS %></option>
+                                            <option value="<%= StatutTache.TERMINEE %>"><%= StatutTache.TERMINEE %></option>
+                                            <option value="<%= StatutTache.ANNULEE %>"><%= StatutTache.ANNULEE %></option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-
-
-                                        <input type="hidden" name="employeAssigne" value="<%= employee.getEmploye().getId() %>"/>
+                                        <label class="form-label">Priorité de la tâche</label>
+                                        <select class="form-select" name="priorite" required>
+                                            <option value="<%= PrioriteTache.BASSE %>"><%= PrioriteTache.BASSE %></option>
+                                            <option value="<%= PrioriteTache.MOYENNE %>"><%= PrioriteTache.MOYENNE %></option>
+                                            <option value="<%= PrioriteTache.HAUTE %>"><%= PrioriteTache.HAUTE %></option>
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="employeAssigne" value="<%= employee.getEmploye().getId() %>">
+                                    <div class="mb-3">
                                     </div>
                                     <button type="submit" class="btn btn-primary">Ajouter</button>
                                 </form>
-
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -105,7 +117,7 @@
 </div>
 <%
     } else {
-        response.sendRedirect("login.jsp");
+    response.sendRedirect("login.jsp");
     }
 %>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

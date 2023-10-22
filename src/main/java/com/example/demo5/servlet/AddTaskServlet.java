@@ -3,10 +3,9 @@ package com.example.demo5.servlet;
 import com.example.demo5.entities.Employe;
 import com.example.demo5.entities.Tache;
 import com.example.demo5.entities.PrioriteTache;
+import com.example.demo5.entities.StatutTache;
 import com.example.demo5.repositories.EmployeeRepository;
-import com.example.demo5.repositories.TaskRepository;
 import com.example.demo5.services.TaskService;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -22,31 +21,32 @@ public class AddTaskServlet extends HttpServlet {
     private final EmployeeRepository employeeRepository;
     private final TaskService taskService;
 
-
-    public AddTaskServlet(EmployeeRepository employeeRepository, TaskService taskService, TaskRepository taskRepository) {
-        this.employeeRepository = employeeRepository;
-        this.taskService = taskService;
-
+    public AddTaskServlet() {
+        this.employeeRepository = new EmployeeRepository();
+        this.taskService = new TaskService();
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String description = request.getParameter("description");
         String deadlineStr = request.getParameter("deadline");
+        String statutStr = request.getParameter("statut");
         String prioriteStr = request.getParameter("priorite");
         int employeAssigneId = Integer.parseInt(request.getParameter("employeAssigne"));
-    Employe employeeAssinId1 =employeeRepository.getEmployeeById(employeAssigneId);
+
+        Employe employeeAssigne = employeeRepository.getEmployeeById(employeAssigneId);
 
         try {
             Date deadline = new SimpleDateFormat("yyyy-MM-dd").parse(deadlineStr);
 
             Tache task = new Tache();
-            task.setEmployeAssigne(employeeAssinId1);
             task.setDescription(description);
             task.setDeadline(deadline);
+            task.setStatut(StatutTache.valueOf(statutStr));
             task.setPriorite(PrioriteTache.valueOf(prioriteStr));
+            task.setEmployeAssigne(employeeAssigne);
 
-
-        taskService.createTask(task);
+            taskService.createTask(task);
 
             response.sendRedirect("reseau");
         } catch (ParseException e) {
