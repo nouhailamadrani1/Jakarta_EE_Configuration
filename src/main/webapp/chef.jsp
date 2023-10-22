@@ -69,11 +69,11 @@
                                         <textarea class="form-control" name="description" required></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label  class="form-label">Date limite</label>
+                                        <label class="form-label">Date limite</label>
                                         <input type="date" class="form-control" name="deadline" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label  class="form-label">Priorité de la tâche</label>
+                                        <label class="form-label">Priorité de la tâche</label>
                                         <select class="form-select" name="priorite" required>
                                             <option value="HAUTE">Haute</option>
                                             <option value="MOYENNE">Moyenne</option>
@@ -81,15 +81,16 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Employé assigné</label>
-                                        <input type="" name="employeAssigne" value="<%= employee.getEmploye().getId() %>"/>
+
+
+                                        <input type="hidden" name="employeAssigne" value="<%= employee.getEmploye().getId() %>"/>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Ajouter</button>
                                 </form>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                <button type="button" class="btn btn-primary">Enregistrer</button>
                             </div>
                         </div>
                     </div>

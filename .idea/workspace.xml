@@ -10,22 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeDepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/EmployeeDepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/ChefServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeeToDepartmentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/TaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/AddTaskServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeDepartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeDepartement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/departement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reseau.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/services/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/chef.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +199,7 @@
       <workItem from="1697498206648" duration="25000000" />
       <workItem from="1697573029668" duration="25127000" />
       <workItem from="1697651287915" duration="13706000" />
-      <workItem from="1697719461746" duration="67845000" />
+      <workItem from="1697719461746" duration="72260000" />
     </task>
     <servers />
   </component>

@@ -24,5 +24,8 @@ public class TaskService {
         }
         return new ArrayList<>();
     }
+    public void createTask(Tache task) {
+        taskRepository.createTask(task);
+    }
 
 }
