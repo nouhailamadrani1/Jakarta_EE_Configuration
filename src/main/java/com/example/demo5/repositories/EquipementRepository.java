@@ -1,5 +1,6 @@
 package com.example.demo5.repositories;
 
+import com.example.demo5.entities.EmployeDepartement;
 import com.example.demo5.entities.Equipement;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -82,4 +83,6 @@ public class EquipementRepository {
             emf.close();
         }
     }
+
+
 }

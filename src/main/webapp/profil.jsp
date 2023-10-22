@@ -9,6 +9,13 @@
   Time: 21:04
   To change this template use File | Settings | File Templates.
 --%>
+
+<%
+
+    if (session.getAttribute("id")!= null) {
+
+
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -167,6 +174,8 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<%   }else {
+    response.sendRedirect("login.jsp");
+}%>
 </body>
 </html>

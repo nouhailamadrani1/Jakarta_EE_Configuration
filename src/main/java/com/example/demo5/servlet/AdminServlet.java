@@ -1,5 +1,6 @@
 package com.example.demo5.servlet;
 
+import com.example.demo5.entities.Departement;
 import com.example.demo5.entities.Employe;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -26,11 +27,15 @@ public class AdminServlet extends HttpServlet {
         TypedQuery<Employe> query = em.createQuery(jpql, Employe.class);
         List<Employe> employees = query.getResultList();
 
+        String jpqlD = "SELECT e FROM Departement e";
+        TypedQuery<Departement> queryA = em.createQuery(jpqlD, Departement.class);
+        List<Departement> departments = queryA.getResultList();
         em.close();
         emf.close();
-
+request.setAttribute("departments", departments);
         request.setAttribute("employees", employees);
 
         request.getRequestDispatcher("admin.jsp").forward(request, response);
     }
+
 }

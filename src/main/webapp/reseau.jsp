@@ -1,4 +1,12 @@
+
+<%
+
+    if (session.getAttribute("id")!= null) {
+
+
+%>
 <%@ page import="com.example.demo5.entities.Employe" %>
+
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.demo5.entities.Post" %><%--
   Created by IntelliJ IDEA.
@@ -94,5 +102,8 @@
     </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<%   }else {
+    response.sendRedirect("login.jsp");
+}%>
 </body>
 </html>

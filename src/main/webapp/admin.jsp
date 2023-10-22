@@ -1,5 +1,14 @@
+
+<%
+
+    if (session.getAttribute("id")!= null) {
+
+
+%>
 <%@ page import="com.example.demo5.entities.Employe" %>
+
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.demo5.entities.Departement" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -27,6 +36,12 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterEquipement">
                         Ajouter équipement
                     </button>
+                </li>
+                <li class "list-group-item d-flex justify-content-between align-items-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mumberDepartment">
+                    Ajouter mombre
+                </button>
                 </li>
             </ul>
         </div>
@@ -57,11 +72,13 @@
                             <form method="post" action="department">
                                 <input type="hidden" name="action" value="add">
                                 <label for="nom">Nom du département:</label>
-                                <input type="text" id="nom" name="nom" class="form-control">
+                                <input type="text" id="nom" name="nom" class="form-control border border-0 border-bottom ">
                                 <label for="description">Description:</label>
-                                <textarea id="description" name="description" class="form-control"></textarea>
+                                <textarea id="description" name="description" class="form-control border border-0 border-bottom "></textarea>
                                 <!-- Add chef information here -->
-                                <select id="chef" name="chef" class="form-control">
+                                <label for="">chef du Departement:</label>
+
+                                <select id="chef" name="chef" class="form-select" >
                                     <%
                                         List<Employe> employees = (List<Employe>) request.getAttribute("employees");
                                         for (Employe employee : employees) {
@@ -73,13 +90,13 @@
                                         }
                                     %>
                                 </select>
-
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -95,34 +112,78 @@
                         <div class="modal-body">
                             <!-- Add form elements for creating a new equipment -->
                             <form action="equipements" method="post">
-                                <input type="hidden" name="action" value="add">
+                                <input type="hidden" name="action"  class="form-control border border-0 border-bottom " value="add">
                                 <label for="nomEquipement">Name:</label>
-                                <input type="text" name="nomEquipement" id="nomEquipement" required>
-                                <label for="type">Type:</label>
-                                <input type="text" name="type" required>
-                                <label for="dateAchat">Purchase Date:</label>
-                                <input type="date" name="dateAchat" required>
-                                <label for="dateMaintenance">Maintenance Date:</label>
-                                <input type="date" name="dateMaintenance" required>
-                                <label for="etat">State:</label>
-                                <select name="etat">
+                                <input type="text" name="nomEquipement" class="form-control border border-0 border-bottom" id="nomEquipement" required>
+                                <label >Type:</label>
+                                <input type="text" name="type"  class="form-control border border-0 border-bottom " required>
+                                <label >Purchase Date:</label>
+                                <input type="date" name="dateAchat" class="form-control border border-0 border-bottom " required>
+                                <label >Maintenance Date:</label>
+                                <input type="date" name="dateMaintenance" class="form-control border border-0 border-bottom " required>
+                                <label >State:</label>
+                                <select class="form-select border border-0 border-bottom"   name="etat">
                                     <option value="EN_SERVICE">In Service</option>
                                     <option value="DISPONIBLE">Available</option>
                                     <option value="MAINTENANCE">Maintenance</option>
                                 </select>
-                                <button type="submit">Add Equipment</button>
+                                <div class="modal-footer">
+                                    <button type="submit">Add Equipment</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
                             </form>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="mumberDepartment" tabindex="-1" aria-labelledby="mumberDepartment" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="">Mumber Department</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <div class="modal-body">
+                            <form method="post" action="EmployeeToDepartment" class="mt-4 px-3">
+                                <label for="employeeId">Select an Employee:</label>
+                                <select id="employeeId" name="employeeId" class="form-select border border-0 border-bottom" >
+                                    <%
+                                        List<Employe> employes = (List<Employe>) request.getAttribute("employees");
+                                        for (Employe employee : employes) {
+                                    %>
+                                    <option value="<%= employee.getId() %>"><%= employee.getPrenom() %></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>
+                                <label for="departmentId">Select a Department:</label>
+                                <select id="departmentId" name="departmentId" class="form-select border border-0 border-bottom" >
+                                    <%
+                                        List<Departement> departments = (List<Departement>) request.getAttribute("departments");
+                                        for (Departement department : departments) {
+                                    %>
+                                    <option value="<%= department.getId() %>"><%= department.getNom() %></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Add Employee</button>
+                                </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<%   }else {
+    response.sendRedirect("login.jsp");
+}%>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

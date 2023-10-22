@@ -5,16 +5,27 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Employe_Departement")
 public class EmployeDepartement {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     @ManyToOne
     @JoinColumn(name = "employe_id")
     private Employe employe;
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "departement_id")
     private Departement departement;
-    // Getters and setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Employe getEmploye() {
         return employe;
     }
@@ -30,6 +41,4 @@ public class EmployeDepartement {
     public void setDepartement(Departement departement) {
         this.departement = departement;
     }
-
 }
-
