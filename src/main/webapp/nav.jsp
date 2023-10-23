@@ -18,11 +18,22 @@
         <li class="nav-item">
           <a class="nav-link text-decoration-none text-white" href="profil.jsp">Profil</a>
         </li>
+        <%
+
+          if (session.getAttribute("id").hashCode() == 4) {
+
+
+        %>
         <li class="nav-item">
           <a class="nav-link text-decoration-none text-white" href="admin">Admin</a>
         </li>
+        <% }%>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="chef/<%= session.getAttribute("id") %>">chef</a>
+
+
+
+          <a class="nav-link text-decoration-none text-white" href="chef/<%= session.getAttribute("id") %>">Chef de Departement</a>
+
         </li>
       </ul>
       <div class="d-flex align-items-center p-0 m-0" style="height: 40px;">

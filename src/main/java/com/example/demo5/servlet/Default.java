@@ -19,7 +19,6 @@ public class Default extends HttpServlet {
 
     @Override
     public void init() {
-//         Initialisation de l'objet DAO (à conserver)
         Persistence.createEntityManagerFactory("default");
 
     }

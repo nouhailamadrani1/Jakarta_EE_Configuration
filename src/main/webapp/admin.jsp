@@ -1,8 +1,5 @@
-
 <%
-
-    if (session.getAttribute("id")!= null) {
-
+    if (session.getAttribute("id").hashCode() == 4) {
 
 %>
 <%@ page import="com.example.demo5.entities.Employe" %>
@@ -27,19 +24,19 @@
             <ul class="px-2 mt-2 list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterDepartement">
+                    <button type="button" class="btn text-white " data-bs-toggle="modal" data-bs-target="#ajouterDepartement" style=" background-color: #F9A8A7 ">
                         Ajouter département
                     </button>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouterEquipement">
+                    <button type="button" class="btn text-white  " data-bs-toggle="modal" data-bs-target="#ajouterEquipement" style=" background-color: #83DBF3 ">
                         Ajouter équipement
                     </button>
                 </li>
-                <li class "list-group-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mumberDepartment">
+                <button type="button" class="btn text-white " data-bs-toggle="modal" data-bs-target="#mumberDepartment" style="background-color: #FFA9D4 ">
                     Ajouter mombre
                 </button>
                 </li>
@@ -50,6 +47,7 @@
             <jsp:include page="nav.jsp"/>
 
             <div class="pb-3" style="background-color: #F5F5F5">
+                <h3 class="text-center">Bienvenue dans tableau de bord <b style="color: #8387F5"><%session.getAttribute("nom");%></b> </h3>
                 <h5 class="px-3 py-4">Statistiques</h5>
 
                 <div class="d-flex justify-content-evenly py-2">

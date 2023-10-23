@@ -40,12 +40,10 @@ public class ChefServlet extends HttpServlet {
 
                     req.getRequestDispatcher("/chef.jsp").forward(req, resp);
                 } else {
-                    // Handle the case where employeChef is not found
-                    resp.sendRedirect(req.getContextPath() + "/reseau"); // You can redirect to an error page
+                    resp.sendRedirect(req.getContextPath() + "/reseau");
                 }
             } catch (NumberFormatException e) {
-                // Handle cases where the path element is not a valid integer
-                resp.sendRedirect(req.getContextPath() + "/reseau"); // You can redirect to an error page
+                resp.sendRedirect(req.getContextPath() + "/reseau");
             }
         }
     }
