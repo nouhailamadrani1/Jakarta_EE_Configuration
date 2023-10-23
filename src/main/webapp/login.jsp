@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="m-0 p-0 overflow-hidden">
+
 <div class="container-fluid">
     <div class="row d-flex justify-content-between h-100 pe-3">
         <div class="col-md-6 bg-black py-4">

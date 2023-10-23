@@ -1,11 +1,9 @@
 package com.example.demo5.servlet;
 
-import com.example.demo5.entities.Departement;
-import com.example.demo5.entities.Employe;
-import com.example.demo5.entities.Equipement;
-import com.example.demo5.entities.Etat;
+import com.example.demo5.entities.*;
 import com.example.demo5.repositories.DepartmentRepository;
 
+import com.example.demo5.repositories.EmployeeDepartmentRepository;
 import com.example.demo5.repositories.EmployeeRepository;
 import com.example.demo5.services.DepartementService;
 import jakarta.servlet.ServletException;
@@ -19,12 +17,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@WebServlet("/department")
+@WebServlet("/department/*")
 public class DepartmentServlet extends HttpServlet {
 
     private DepartementService departementService;
     private DepartmentRepository departementRepository;
     private EmployeeRepository employeeRepository;
+    private EmployeeDepartmentRepository employeeDepartmentRepository;
 
 
     @Override
@@ -33,6 +32,7 @@ public class DepartmentServlet extends HttpServlet {
         departementRepository = new DepartmentRepository();
         departementService =new DepartementService();
         employeeRepository= new EmployeeRepository();
+        employeeDepartmentRepository =new EmployeeDepartmentRepository();
 
     }
 
@@ -42,7 +42,19 @@ public class DepartmentServlet extends HttpServlet {
 
 
         request.getRequestDispatcher("departement.jsp").forward(request, response);
-    }
+
+//        String[] pathInfo = request.getPathInfo().split("/");
+//        if (pathInfo.length > 1) {
+//            String employeIdStr = pathInfo[1];
+//            int employeId = Integer.parseInt(employeIdStr);
+//            Employe employe = employeeRepository.getEmployeeById(employeId);
+//
+//            EmployeDepartement departementEmploye =employeeDepartmentRepository.getDepartmentEmploye(employe);
+//            request.setAttribute("departementEmploye", departementEmploye);
+//
+//            request.getRequestDispatcher("/departement.jsp").forward(request, response);
+//        }
+        }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 

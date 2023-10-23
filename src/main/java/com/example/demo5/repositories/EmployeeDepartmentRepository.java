@@ -3,7 +3,6 @@ package com.example.demo5.repositories;
 import com.example.demo5.entities.Departement;
 import com.example.demo5.entities.Employe;
 import com.example.demo5.entities.EmployeDepartement;
-import com.example.demo5.entities.Equipement;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -52,5 +51,24 @@ public class EmployeeDepartmentRepository {
 
         return results;
     }
+    public EmployeDepartement getDepartmentEmploye(Employe employe) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+        EntityManager em = emf.createEntityManager();
 
+        Query query = em.createQuery(
+                "SELECT ed FROM EmployeDepartement ed " +
+                        "INNER JOIN ed.employe e " +
+                        "INNER JOIN ed.departement d " +
+                        "WHERE e = :employe", EmployeDepartement.class
+        );
+
+        query.setParameter("employe", employe);
+
+        EmployeDepartement employeeDepartment = (EmployeDepartement) query.getSingleResult();
+
+        em.close();
+        emf.close();
+
+        return employeeDepartment;
+    }
 }

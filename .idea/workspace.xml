@@ -10,13 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/ChefServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/ChefServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/Default.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/Default.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeDepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeDepartmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/chef.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/departement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +206,7 @@
       <workItem from="1697573029668" duration="25127000" />
       <workItem from="1697651287915" duration="13706000" />
       <workItem from="1697719461746" duration="72362000" />
-      <workItem from="1698002882554" duration="11662000" />
+      <workItem from="1698002882554" duration="20027000" />
     </task>
     <servers />
   </component>
@@ -221,6 +225,31 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java</url>
           <line>21</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/DepartmentServlet.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,17 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="reseau">Reseau</a>
+          <a class="nav-link active text-white fw-bolder" aria-current="page" href="reseau">Reseau</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="equipements">Equipement</a>
+          <a class="nav-link text-decoration-none text-white fw-bolder" href="equipements">Equipement</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="department">Departement</a>
+          <a class="nav-link text-decoration-none text-white fw-bolder" href="department">Departement</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="profil.jsp">Profil</a>
-        </li>
+
         <%
 
           if (session.getAttribute("id").hashCode() == 4) {
@@ -25,14 +23,14 @@
 
         %>
         <li class="nav-item">
-          <a class="nav-link text-decoration-none text-white" href="admin">Admin</a>
+          <a class="nav-link text-decoration-none text-white fw-bolder" href="admin">Admin</a>
         </li>
         <% }%>
         <li class="nav-item">
 
 
 
-          <a class="nav-link text-decoration-none text-white" href="chef/<%= session.getAttribute("id") %>">Chef de Departement</a>
+          <a class="nav-link text-decoration-none text-white fw-bolder" href="chef/<%= session.getAttribute("id") %>">Chef de Departement</a>
 
         </li>
       </ul>

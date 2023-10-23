@@ -21,6 +21,9 @@
 
 </head>
 <body style="background-color: #F5F5F5">
+<div class="w-100" style="background-color: white"><a class="fst-italic fs-3 p-2 text-center text-decoration-none" href="#" style="color: #C9CAF0; ">
+    <span class="text-dark ">Resourcium</span>Optima
+</a></div>
 <jsp:include page="nav.jsp"/>
 <h5 class="text-center  my-3">Votre Départment </h5>
 <div class="d-flex justify-content-center my-3  rounded" >

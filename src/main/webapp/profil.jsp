@@ -24,6 +24,12 @@
 
 <div class="my-4" style="background-color: #F5F5F5">
     <div class="d-flex justify-content-around align-items-center">
+        <%
+            Employe employe = (Employe) request.getAttribute("employee");
+            if (employe != null) {
+        %>
+        <% if (employe.getId() == session.getAttribute("id").hashCode()) { %>
+
         <div class="rounded d-flex justify-content-center align-items-center" style="width: 15%; background-color: white; height: 220px">
             <div>
                 <div class="d-flex justify-content-center py-2">
@@ -36,12 +42,10 @@
                     <button type="submit" class="btn shadow px-1 fw-bold" style="background-color: #F81010; color: #ffffff; width: 190px;">Déconnecte</button>
                 </div>
             </div>
-        </div>
+        </div>        <%}%>
+
         <div class="rounded d-flex justify-content-center align-items-center" style="width: 50%; background-color: white; height: 220px;">
-            <%
-                Employe employe = (Employe) request.getAttribute("employee");
-                if (employe != null) {
-            %>
+
             <% if (employe.getId() == session.getAttribute("id").hashCode()) { %>
             <div class="w-25">
                 <div class="d-flex justify-content-center py-2">
@@ -106,6 +110,7 @@
                 }}
             %>
         </div>
+        <% if (employe.getId() == session.getAttribute("id").hashCode()) { %>
         <div class="rounded d-flex justify-content-center align-items-center" style="width: 20%; background-color: white; height: 220px">
             <div>
                 <div class="d-flex justify-content-center py-2">
@@ -116,6 +121,7 @@
                 </div>
             </div>
         </div>
+        <%}%>
     </div>
     <div class="m-4 d-flex justify-content-around align-items-center p-3 rounded shadow-sm" style="background-color: #83DBF3">
         <h6 class="text-white fw-semibold"> Department: Web Development</h6>

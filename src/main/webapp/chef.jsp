@@ -18,23 +18,12 @@
 <body style="background-color: #F5F5F5">
 <div class="m-0 p-0 overflow-hidden">
     <div class="row">
-        <div class="col-md-2 bg-white">
-            <a class="fst-italic fs-3 mt-2 mx-2 d-flex align-items-center text-decoration-none" href="#" style="color: #C9CAF0;">
-                <span class="text-dark">Resourcium</span>Optima
-            </a>
-            <h5 class="mt-5 px-2">Admin</h5>
-            <h6 class="mt-3 px-2">Action</h6>
-            <ul class="px-2 mt-2 list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <!-- Button trigger modal -->
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            <!-- Your existing content here -->
-            <jsp:include page="nav.jsp"/>
+        <a class="fst-italic fs-3 p-2 text-center text-decoration-none" href="#" style="color: #C9CAF0; background-color: white">
+            <span class="text-dark ">Resourcium</span>Optima
+        </a>
+
+
+               <jsp:include page="nav.jsp"/></div>
             <table class="table">
                 <thead>
                 <tr>
@@ -42,6 +31,7 @@
                     <th scope="col">Nom</th>
                     <th scope="col">Prénom</th>
                     <th scope="col">Post</th>
+                    <th scope="col">Department</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
@@ -54,9 +44,13 @@
                     <th scope="row"><%= employee.getEmploye().getId() %></th>
                     <td><%= employee.getEmploye().getNom() %></td>
                     <td><%= employee.getEmploye().getPrenom() %></td>
+                    <td><%= employee.getDepartement().getNom() %></td>
                     <td><%= employee.getEmploye().getPost()%></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTask_<%= employee.getEmploye().getId() %>">
+
+
+                        <button type="button" class="btn shadow mb-5 px-3 fw-bold" style="background-color: #C9CAF0; color: #8387F5"
+                                data-bs-toggle="modal" data-bs-target="#addTask_<%= employee.getEmploye().getId() %>">
                             Ajouter tâche
                         </button>
                     </td>
@@ -98,7 +92,8 @@
                                     <input type="hidden" name="employeAssigne" value="<%= employee.getEmploye().getId() %>">
                                     <div class="mb-3">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    <button type="submit" class="btn shadow mb-5 px-3 fw-bold" style="background-color: #C9CAF0; color: #8387F5">Ajouter Tache</button>
+
                                 </form>
                             </div>
                             <div class="modal-footer">
