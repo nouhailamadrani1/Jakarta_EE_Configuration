@@ -6,7 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url("images/6896179.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .project-heading {
             text-align: center;
@@ -24,54 +26,46 @@
     </style>
 </head>
 <body>
+
+<nav class=" " style=" color: white">
+    <div class=" d-flex align-items-center justify-content-around py-2 ">
+        <a class="fst-italic fs-3   text-decoration-none" href="#" style="color: #C9CAF0;">
+            <span class="text-white">Resourcium</span>Optima
+        </a>
+
+            <div class="d-flex justify-content-between   ">
+                    <a class="mx-4  text-white fw-bolder text-decoration-none" aria-current="page" href="index.jsp">Accueil</a>
+                    <a class="mx-4 text-decoration-none text-white fw-bolder" href="">A propos de nous</a>
+
+                    <a class="mx-4 text-decoration-none text-white fw-bolder" href="">contactez-nous</a>
+
+
+
+
+            </div>
+
+
+    </div>
+</nav>
 <div class="container mt-5">
     <div class="project-heading">
-        <img src="your-image-url.jpg" alt="Project Image" class="img-fluid" style="max-width: 200px;">
-        <h1>Gestion des Utilisateurs</h1>
+
+        <h2 class="text-white">Resourcium Optima</h2>
+        <p class="text-white-50" >Sur notre site de Gestion des Utilisateurs, vous pouvez créer des comptes, vous connecter et gérer vos profils. Nous avons également des rôles d'application.
+
+            Dans la section Gestion des Allocations, réservez des équipements, attribuez des tâches et recherchez des équipements avec des notifications pour les abandons.
+
+            En ce qui concerne la Gestion des Pannes, signalez les problèmes, avec des notifications pour l'administrateur, et un rôle de technicien pour les résoudre. Une gestion efficace à portée de main.</p>
     </div>
 
-    <div class="project-description">
-        <p class="lead">Bienvenue dans notre système de gestion avancée. Notre projet comprend les fonctionnalités suivantes :</p>
-    </div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Authentification et Autorisation</h5>
-                    <p class="card-text">
-                        Mise en place d'un système d'authentification et d'autorisation pour les utilisateurs. Permet aux utilisateurs de créer un compte, de se connecter et de gérer leur profil, y compris la modification des informations et le changement de mot de passe.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Gestion des Allocations</h5>
-                    <p class="card-text">
-                        Autorisation du personnel à réserver des équipements et des ressources humaines à affecter des tâches en fonction de la disponibilité. Permet aux utilisateurs de rechercher des équipements en fonction de critères variés comme le type, la disponibilité, etc. En prime, un système de notification en cas d'abandon d'allocation d'un équipement souhaité.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Gestion des Pannes</h5>
-                    <p class="card-text">
-                        Permet au personnel de signaler les pannes des équipements et autres problèmes, avec notification à l'administrateur. Un rôle de technicien peut être ajouté pour la résolution des problèmes et remontée à l'administrateur pour confirmation.
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="text-center">
-        <button type="button" class="btn shadow mb-5 px-4 fw-bold" style="background-color: #343a40; color: #ffffff">
+        <button type="button" class="btn shadow-lg px-3 fw-bold" style="background-color: #C9CAF0; color: #8387F5">
             <a href="register.jsp" class="text-decoration-none" style="color: #ffffff">S'Inscrire</a>
         </button>
-        <button type="button" class="btn shadow mb-5 px-4 fw-bold" style="background-color: #343a40; color: #ffffff">
+        <button type="button" class="btn shadow-lg  px-3 fw-bold" style="background-color: #C9CAF0; color: #8387F5">
             <a href="login.jsp" class="text-decoration-none" style="color: #ffffff">Se Connecter</a>
         </button>
     </div>

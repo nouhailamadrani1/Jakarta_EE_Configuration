@@ -28,7 +28,7 @@
 
 <div style="background-color: #C9CAF0"  class=" m-3 p-1 d-flex align-items-center  justify-content-center rounded-2 rounded ">
     <div class="w-100" >
-        <h5 class="text-center m-1  ">Vos réservations : </h5>
+        <h5 class="text-center m-1  ">Vos réservations :                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </h5>
         <div class="p-2 m-2 d-flex justify-content-around rounded   " style="background-color: white">
             <div class="p-2 px-3 rounded fw-bold" >  Nom : Portable HP</div>
             <div class="p-2 rounded fw-bold" >Etat : <button class="btn" style="background-color: rgba(187, 250, 107, 0.55); color: #75C80C;">En service</button> </div>
@@ -50,12 +50,12 @@
 </div>
 <div class="px-3 ">
     <h5 class="text-center my-3">Équipements</h5>
-    <% if (request.getAttribute("errorMessage") != null) { %>
+    <% String errorMessage = (String) request.getAttribute("errorMessage");
+        if (errorMessage != null && !errorMessage.isEmpty()) { %>
     <div class="alert alert-danger" role="alert">
-        <%= request.getAttribute("errorMessage") %>
+        <%= errorMessage %>
     </div>
     <% } %>
-
     <div class="d-flex justify-content-center flex-wrap ">
         <%
             List<Equipement> equipementList = (List<Equipement>) request.getAttribute("equipmentList");
@@ -68,9 +68,10 @@
                     <h6>Etat : <span style="color: ${equipment.etat.getCouleurTexte()}"><%=equipment.getEtat().getNom()%></span></h6>
                     <h6>Type : <%=equipment.getType()%></h6>
                     <div class="d-flex justify-content-center my-1">
-                        <button class="btn px-2 mx-1" style="color: #8387F5; background-color: #C9CAF0">Plus de détails</button>
+                        <form>  <button class="btn px-2 mx-1" style="color: #8387F5; background-color: #C9CAF0">Plus de détails</button></form>
 
-                        <form action="equipements" method="post">
+
+                        <form action="equipements"  method="post" >
                             <input type="hidden" name="action"  class="form-control border border-0 border-bottom " value="reserve">
                             <input type="hidden" value="<%= equipment.getId() %>" name="equipement">
                             <input type="hidden" value="<%= session.getAttribute("id") %>" name="employe">

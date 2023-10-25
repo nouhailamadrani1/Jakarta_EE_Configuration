@@ -39,6 +39,9 @@ public class EquipementServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Equipement> equipmentList = equipementService.getAllEquipements();
         request.setAttribute("equipmentList", equipmentList);
+
+
+
         request.getRequestDispatcher("equipement.jsp").forward(request, response);
     }
 
@@ -110,6 +113,8 @@ public class EquipementServlet extends HttpServlet {
             boolean reservationCreated = employeEquipementRepository.createEmployeEquipement(reservation);
 
             if (reservationCreated) {
+//                request.setAttribute("errorMessage", "reservation Created");
+
                 response.sendRedirect("equipements");
 
             } else {

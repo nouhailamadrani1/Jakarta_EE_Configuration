@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02340b66-bc38-47e9-b3cb-c9a56cc84170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeEquipementRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/ReservationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeEquipement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/entities/EmployeEquipement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeDepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EmployeeDepartmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/repositories/EquipementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EmployeTaskServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo5/servlet/EquipementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/equipement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
@@ -205,7 +199,7 @@
       <workItem from="1697573029668" duration="25127000" />
       <workItem from="1697651287915" duration="13706000" />
       <workItem from="1697719461746" duration="72362000" />
-      <workItem from="1698002882554" duration="40392000" />
+      <workItem from="1698002882554" duration="49710000" />
     </task>
     <servers />
   </component>
