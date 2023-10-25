@@ -1,12 +1,15 @@
 package com.example.demo5.repositories;
 
 import com.example.demo5.entities.EmployeDepartement;
+import com.example.demo5.entities.EmployeEquipement;
 import com.example.demo5.entities.Equipement;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class EquipementRepository {
@@ -64,6 +67,43 @@ public class EquipementRepository {
     }
 
 
+
+
+
+
+    public List<EmployeEquipement> getAllReservationByTypeAndUpdateDate(String type){
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+        EntityManager em = emf.createEntityManager();
+
+        try {
+
+            Query query = em.createQuery(
+                    "SELECT ee FROM EmployeEquipement ee " +
+                            "INNER JOIN ee.employe e " +
+                            "INNER JOIN ee.equipement q " +
+                            "WHERE q.type= :type" +
+                            " and ee.dateEnd > CURRENT DATE "
+
+                    , EmployeEquipement.class
+
+            );
+
+            query.setParameter("type", type);
+
+            List<EmployeEquipement> results = query.getResultList();
+
+//            int size = type.length();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+            emf.close();
+        }
+        return null;
+    }
     public void deleteEquipement(int id) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
         EntityManager em = emf.createEntityManager();
@@ -86,3 +126,11 @@ public class EquipementRepository {
 
 
 }
+//   class main{
+//       public static void main(String[] args) {
+//           String type = "gholam";
+//EquipementRepository test = new EquipementRepository();
+//
+//           test.getAllReservationByTypeAndUpdateDate(type);
+//       }
+//   }

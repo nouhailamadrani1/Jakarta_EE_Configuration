@@ -55,6 +55,8 @@ public class EmployeeDepartmentRepository {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
         EntityManager em = emf.createEntityManager();
 
+
+
         Query query = em.createQuery(
                 "SELECT ed FROM EmployeDepartement ed " +
                         "INNER JOIN ed.employe e " +

@@ -2,6 +2,9 @@ package com.example.demo5.servlet;
 
 import com.example.demo5.entities.Employe;
 import com.example.demo5.entities.Tache;
+import com.example.demo5.repositories.EmployeEquipementRepository;
+import com.example.demo5.repositories.EmployeeRepository;
+import com.example.demo5.repositories.EquipementRepository;
 import com.example.demo5.services.EmployeeService;
 import com.example.demo5.services.TaskService;
 
@@ -18,6 +21,10 @@ public class EmployeTaskServlet extends HttpServlet {
 
     private final TaskService employeeTaskService;
     private final EmployeeService employeeService;
+    private EmployeEquipementRepository employeEquipementRepository;
+    private EquipementRepository equipementRepository;
+    private EmployeeRepository employeeRepository;
+
 
     public EmployeTaskServlet() {
         this.employeeTaskService = new TaskService();

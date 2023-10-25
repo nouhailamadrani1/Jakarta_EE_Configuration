@@ -50,6 +50,12 @@
 </div>
 <div class="px-3 ">
     <h5 class="text-center my-3">Équipements</h5>
+    <% if (request.getAttribute("errorMessage") != null) { %>
+    <div class="alert alert-danger" role="alert">
+        <%= request.getAttribute("errorMessage") %>
+    </div>
+    <% } %>
+
     <div class="d-flex justify-content-center flex-wrap ">
         <%
             List<Equipement> equipementList = (List<Equipement>) request.getAttribute("equipmentList");
@@ -63,7 +69,15 @@
                     <h6>Type : <%=equipment.getType()%></h6>
                     <div class="d-flex justify-content-center my-1">
                         <button class="btn px-2 mx-1" style="color: #8387F5; background-color: #C9CAF0">Plus de détails</button>
-                        <button class="btn px-2 mx-1" style="color: #ffffff; background-color: #F81010">Réserve</button>
+
+                        <form action="equipements" method="post">
+                            <input type="hidden" name="action"  class="form-control border border-0 border-bottom " value="reserve">
+                            <input type="hidden" value="<%= equipment.getId() %>" name="equipement">
+                            <input type="hidden" value="<%= session.getAttribute("id") %>" name="employe">
+
+                            <button  type="submit" class="btn px-2 mx-1" style="color: #ffffff; background-color: #F81010">Réserve</button>
+                        </form>
+
                     </div>
                 </div>
             </div>

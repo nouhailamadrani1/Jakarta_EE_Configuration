@@ -1,7 +1,12 @@
 package com.example.demo5.servlet;
 
+import com.example.demo5.entities.Employe;
+import com.example.demo5.entities.EmployeEquipement;
 import com.example.demo5.entities.Equipement;
 import com.example.demo5.entities.Etat;
+import com.example.demo5.repositories.EmployeEquipementRepository;
+import com.example.demo5.repositories.EmployeeRepository;
+import com.example.demo5.repositories.EquipementRepository;
 import com.example.demo5.services.EquipementService;
 
 import jakarta.servlet.ServletException;
@@ -19,11 +24,16 @@ import java.util.List;
 public class EquipementServlet extends HttpServlet {
 
     private EquipementService equipementService;
+    private EmployeEquipementRepository employeEquipementRepository;
+    private EquipementRepository equipementRepository;
+    private EmployeeRepository employeeRepository;
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        equipementService = new EquipementService();
+
+    public EquipementServlet() {
+        this.equipementService = new EquipementService();
+        this.employeEquipementRepository = new EmployeEquipementRepository();
+        this.equipementRepository = new EquipementRepository();
+        this.employeeRepository = new EmployeeRepository();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,6 +56,11 @@ public class EquipementServlet extends HttpServlet {
                 case "delete":
                     handleDeleteEquipement(request, response);
                     break;
+                case "reserve":
+                    handleReservation(request, response);
+                    break;
+
+
                 default:
                     response.sendRedirect("equipements");
             }
@@ -53,6 +68,8 @@ public class EquipementServlet extends HttpServlet {
             response.sendRedirect("equipements");
         }
     }
+
+
 
     private void handleAddEquipement(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
@@ -77,6 +94,30 @@ public class EquipementServlet extends HttpServlet {
             e.printStackTrace();
         }
         response.sendRedirect("equipements");
+    }
+    private void handleReservation(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        int equipementId = Integer.parseInt(request.getParameter("equipement"));
+        int employeId = Integer.parseInt(request.getParameter("employe"));
+
+        Employe employe = employeeRepository.getEmployeeById(employeId);
+        Equipement equipement = equipementRepository.findEquipementById(equipementId);
+
+        if (employe != null && equipement != null) {
+            EmployeEquipement reservation = new EmployeEquipement();
+            reservation.setEmploye(employe);
+            reservation.setEquipement(equipement);
+
+            boolean reservationCreated = employeEquipementRepository.createEmployeEquipement(reservation);
+
+            if (reservationCreated) {
+                response.sendRedirect("equipements");
+
+            } else {
+                System.out.println("Reservation failed.");
+            }
+        } else {
+            System.out.println("Employee or equipment not found.");
+        }
     }
 
     private void handleUpdateEquipement(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -104,7 +145,7 @@ public class EquipementServlet extends HttpServlet {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("equipements"); // Redirect to equipment list page
+        response.sendRedirect("equipements");
     }
 
     private void handleDeleteEquipement(HttpServletRequest request, HttpServletResponse response) throws IOException {
