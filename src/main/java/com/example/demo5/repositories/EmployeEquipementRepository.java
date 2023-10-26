@@ -7,9 +7,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 public class EmployeEquipementRepository {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-    EntityManager em = emf.createEntityManager();
-    EntityTransaction transaction = em.getTransaction();
+   ;
 
     public boolean createEmployeEquipement(EmployeEquipement employeEquipement) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
@@ -35,28 +33,30 @@ public class EmployeEquipementRepository {
 
 
     public List<EmployeEquipement> getEmployeEquipementByEmploye(Employe employe) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+        EntityManager em = emf.createEntityManager();
         return em.createQuery("SELECT e FROM EmployeEquipement e WHERE e.employe = :employe", EmployeEquipement.class)
                 .setParameter("employe", employe)
                 .getResultList();
     }
 
-    public EmployeEquipement getEmployeEquipementById(Long id) {
-        return em.find(EmployeEquipement.class, id);
-    }
+//    public EmployeEquipement getEmployeEquipementById(Long id) {
+//        return em.find(EmployeEquipement.class, id);
+//    }
 
-    public List<EmployeEquipement> getAllEmployeEquipements() {
-        return em.createQuery("SELECT e FROM EmployeEquipement e", EmployeEquipement.class).getResultList();
-    }
+//    public List<EmployeEquipement> getAllEmployeEquipements() {
+//        return em.createQuery("SELECT e FROM EmployeEquipement e", EmployeEquipement.class).getResultList();
+//    }
 
-    public void updateEmployeEquipement(EmployeEquipement employeEquipement) {
-        em.getTransaction().begin();
-        em.merge(employeEquipement);
-        em.getTransaction().commit();
-    }
+//    public void updateEmployeEquipement(EmployeEquipement employeEquipement) {
+//        em.getTransaction().begin();
+//        em.merge(employeEquipement);
+//        em.getTransaction().commit();
+//    }
 
-    public void deleteEmployeEquipement(EmployeEquipement employeEquipement) {
-        em.getTransaction().begin();
-        em.remove(employeEquipement);
-        em.getTransaction().commit();
-    }
+//    public void deleteEmployeEquipement(EmployeEquipement employeEquipement) {
+//        em.getTransaction().begin();
+//        em.remove(employeEquipement);
+//        em.getTransaction().commit();
+//    }
 }

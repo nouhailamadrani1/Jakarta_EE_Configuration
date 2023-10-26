@@ -33,6 +33,13 @@
           <a class="nav-link text-decoration-none text-white fw-bolder" href="chef/<%= session.getAttribute("id") %>">Chef de Departement</a>
 
         </li>
+        <li class="nav-item">
+
+
+
+<%--          <a class="nav-link text-decoration-none text-white fw-bolder" href="reservations/">Reservation </a>--%>
+
+        </li>
       </ul>
       <div class="d-flex align-items-center p-0 m-0" style="height: 40px;">
         <img src="images/n.jpg" class="rounded-circle me-2" alt="profil" width="40px" height="40px">
